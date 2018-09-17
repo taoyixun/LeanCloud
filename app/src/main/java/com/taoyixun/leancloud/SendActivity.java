@@ -1,4 +1,4 @@
-package com.xutaotao.leancloud;
+package com.taoyixun.leancloud;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -12,13 +12,13 @@ import android.widget.Toast;
 
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVUser;
-import com.avos.avoscloud.RequestPasswordResetCallback;
 import com.avos.avoscloud.SignUpCallback;
 
 public class SendActivity extends AppCompatActivity {
 
     private final int SEND_SUCCESSES = 1;
     private final int SEND_FAILURES = SEND_SUCCESSES + 1;
+    private final int SEND_TIME = 1000;
 
     private static String[] mContents = new String[]{};
     private static int mPosition;
@@ -90,9 +90,9 @@ public class SendActivity extends AppCompatActivity {
             @Override
             public void done(AVException e) {
                 if (e == null) {
-                    mHandler.sendEmptyMessageDelayed(SEND_SUCCESSES, 300);
+                    mHandler.sendEmptyMessageDelayed(SEND_SUCCESSES, SEND_TIME);
                 } else {
-                    mHandler.sendEmptyMessageDelayed(SEND_FAILURES, 300);
+                    mHandler.sendEmptyMessageDelayed(SEND_FAILURES, SEND_TIME);
                 }
             }
         });

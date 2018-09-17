@@ -14,7 +14,7 @@
 
     <Button
         android:layout_width="match_parent"
-        android:onClick="go"
-        android:layout_height="50dp" />
+        android:layout_height="50dp"
+        android:onClick="go" />
 
 </RelativeLayout>

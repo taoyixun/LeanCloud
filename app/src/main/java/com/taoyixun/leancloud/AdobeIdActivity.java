@@ -1,16 +1,14 @@
-package com.xutaotao.leancloud;
+package com.taoyixun.leancloud;
 
 import android.graphics.Bitmap;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import org.apache.http.util.EncodingUtils;
-
-import java.io.UnsupportedEncodingException;
 
 public class AdobeIdActivity extends AppCompatActivity {
 

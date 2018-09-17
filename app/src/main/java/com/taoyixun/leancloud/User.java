@@ -1,4 +1,4 @@
-package com.xutaotao.leancloud;
+package com.taoyixun.leancloud;
 
 import com.avos.avoscloud.AVClassName;
 import com.avos.avoscloud.AVUser;
