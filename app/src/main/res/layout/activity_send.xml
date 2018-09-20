@@ -12,7 +12,7 @@
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:onClick="onSend"
-        android:text="Send"
+        android:text="第二步：发送"
         app:layout_constraintBottom_toBottomOf="@+id/readData"
         app:layout_constraintEnd_toStartOf="@+id/readData"
         app:layout_constraintHorizontal_bias="0.5"
@@ -34,14 +34,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/send" />
+        app:layout_constraintTop_toBottomOf="@+id/second" />
 
     <Button
         android:id="@+id/readData"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:onClick="onReadData"
-        android:text="ReadData"
+        android:text="第一步：读取"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/send" />
@@ -56,5 +56,32 @@
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="@+id/content"
         app:layout_constraintTop_toTopOf="@+id/content" />
+
+    <EditText
+        android:id="@+id/second"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="发送间隔"
+        android:inputType="number"
+        android:text="2"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/send"
+        app:layout_constraintStart_toStartOf="@+id/send"
+        app:layout_constraintTop_toBottomOf="@+id/send" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="秒"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/second"
+        app:layout_constraintStart_toEndOf="@+id/second"
+        app:layout_constraintTop_toTopOf="@+id/second" />
 
 </android.support.constraint.ConstraintLayout>

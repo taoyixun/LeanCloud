@@ -18,7 +18,7 @@ public class SendActivity extends AppCompatActivity {
 
     private final int SEND_SUCCESSES = 1;
     private final int SEND_FAILURES = SEND_SUCCESSES + 1;
-    private final int SEND_TIME = 1000;
+    private int SEND_TIME = 2000;
 
     private static String[] mContents = new String[]{};
     private static int mPosition;
@@ -26,6 +26,7 @@ public class SendActivity extends AppCompatActivity {
     private static int mNumberOfFailures;
     private EditText mEtContent;
     private TextView mTvPosition;
+    private EditText mEtSecond;
 
     @SuppressLint("HandlerLeak")
     private Handler mHandler = new Handler() {
@@ -58,6 +59,7 @@ public class SendActivity extends AppCompatActivity {
         setContentView(R.layout.activity_send);
         mEtContent = findViewById(R.id.content);
         mTvPosition = findViewById(R.id.position);
+        mEtSecond = findViewById(R.id.second);
 
         updateNumber();
         if (mContents.length != 0) {
@@ -80,6 +82,7 @@ public class SendActivity extends AppCompatActivity {
             Toast.makeText(this, "请先读取数据！", Toast.LENGTH_LONG).show();
             return;
         }
+
         String s = mContents[mPosition] + "@qq.com";
         AVUser.logOut();
         AVUser user = new AVUser();
@@ -99,6 +102,13 @@ public class SendActivity extends AppCompatActivity {
     }
 
     public void onSend(View view) {
+        String secondStr = mEtSecond.getText().toString();
+        if ("".equals(secondStr)) {
+            Toast.makeText(this, "请输入发送间隔！", Toast.LENGTH_LONG).show();
+            return;
+        } else {
+            SEND_TIME = Integer.parseInt(secondStr) * 1000;
+        }
         send();
     }
 
