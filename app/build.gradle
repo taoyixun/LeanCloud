@@ -17,7 +17,7 @@ android {
 
         }
         release {// 自己的签名文件
-            storeFile file("/Users/xutao/work/project/Test/LeanCloud/app/test.keystore")
+            storeFile file("../app/test.keystore")
             storePassword "testtest"
             keyAlias "test"
             keyPassword "testtest"

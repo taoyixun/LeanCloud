@@ -33,13 +33,22 @@ public class MyLeanCloudApp extends Application {
             "H7UEH6QW8LuA4bG30W19PgM4"
     };
 
+    /**
+     * 294523018@qq.com
+     * qq2762129664
+     */
+    private static String[] qq2762129664 = new String[]{
+            "w3W0c1LKXXc5f1AwvWa2HRpg-gzGzoHsz",
+            "MO7oKchebXiaWG0uA7Va5tHM"
+    };
+
     @Override
     public void onCreate() {
         super.onCreate();
 
         AVUser.registerSubclass(User.class);
         // 初始化参数依次为 this, AppId, AppKey
-        AVOSCloud.initialize(this, app1[0], app1[1]);
+        AVOSCloud.initialize(this, qq2762129664[0], qq2762129664[1]);
         // 放在 SDK 初始化语句 AVOSCloud.initialize() 后面，只需要调用一次即可
         AVOSCloud.setDebugLogEnabled(true);
     }
